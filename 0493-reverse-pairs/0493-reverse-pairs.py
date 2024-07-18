@@ -13,11 +13,9 @@ class Solution:
             
             return count
         
-        # Function to merge and count reverse pairs across two sorted halves
         def merge_and_count(nums, temp, left, mid, right):
             i, j = left, mid + 1
             count = 0
-            # Calculate the number of reverse pairs
             while i <= mid and j <= right:
                 if nums[i] > 2 * nums[j]:
                     count += (mid - i + 1)
